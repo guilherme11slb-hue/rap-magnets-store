@@ -93,8 +93,8 @@ function Home() {
               style={{ animationDelay: `${i * 0.08}s` }}
             >
               <div className="doodle-border doodle-shadow bg-paper p-3 transition-transform group-hover:-translate-y-1 group-hover:rotate-[-1deg]">
-                <div className="aspect-square overflow-hidden border-2 border-ink">
-                  <img src={p.image} alt={p.name} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" width={1024} height={1024} />
+                <div className="aspect-square overflow-hidden border-2 border-ink bg-gradient-to-br from-neutral-700 via-neutral-800 to-neutral-900">
+                  <img src={p.image} alt={p.name} className="h-full w-full object-contain drop-shadow-[0_6px_10px_rgba(0,0,0,0.55)] transition-transform duration-500 group-hover:scale-105" loading="lazy" width={1024} height={1024} />
                 </div>
                 <div className="mt-3 flex items-center justify-between">
                   <h3 className="font-display text-2xl">{p.name}</h3>
