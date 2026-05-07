@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SpinRouteImport } from './routes/spin'
 import { Route as InfoRouteImport } from './routes/info'
+import { Route as CheckoutRouteImport } from './routes/checkout'
 import { Route as CatalogRouteImport } from './routes/catalog'
 import { Route as IndexRouteImport } from './routes/index'
 
@@ -22,6 +23,11 @@ const SpinRoute = SpinRouteImport.update({
 const InfoRoute = InfoRouteImport.update({
   id: '/info',
   path: '/info',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CheckoutRoute = CheckoutRouteImport.update({
+  id: '/checkout',
+  path: '/checkout',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CatalogRoute = CatalogRouteImport.update({
@@ -38,12 +44,14 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/catalog': typeof CatalogRoute
+  '/checkout': typeof CheckoutRoute
   '/info': typeof InfoRoute
   '/spin': typeof SpinRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/catalog': typeof CatalogRoute
+  '/checkout': typeof CheckoutRoute
   '/info': typeof InfoRoute
   '/spin': typeof SpinRoute
 }
@@ -51,20 +59,22 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/catalog': typeof CatalogRoute
+  '/checkout': typeof CheckoutRoute
   '/info': typeof InfoRoute
   '/spin': typeof SpinRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/catalog' | '/info' | '/spin'
+  fullPaths: '/' | '/catalog' | '/checkout' | '/info' | '/spin'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/catalog' | '/info' | '/spin'
-  id: '__root__' | '/' | '/catalog' | '/info' | '/spin'
+  to: '/' | '/catalog' | '/checkout' | '/info' | '/spin'
+  id: '__root__' | '/' | '/catalog' | '/checkout' | '/info' | '/spin'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   CatalogRoute: typeof CatalogRoute
+  CheckoutRoute: typeof CheckoutRoute
   InfoRoute: typeof InfoRoute
   SpinRoute: typeof SpinRoute
 }
@@ -83,6 +93,13 @@ declare module '@tanstack/react-router' {
       path: '/info'
       fullPath: '/info'
       preLoaderRoute: typeof InfoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/checkout': {
+      id: '/checkout'
+      path: '/checkout'
+      fullPath: '/checkout'
+      preLoaderRoute: typeof CheckoutRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/catalog': {
@@ -105,6 +122,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   CatalogRoute: CatalogRoute,
+  CheckoutRoute: CheckoutRoute,
   InfoRoute: InfoRoute,
   SpinRoute: SpinRoute,
 }
