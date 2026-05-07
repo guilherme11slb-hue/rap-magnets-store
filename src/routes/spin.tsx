@@ -104,13 +104,14 @@ function Spin() {
                       x={tx}
                       y={ty}
                       fill={text}
-                      fontFamily="Caveat Brush, cursive"
-                      fontSize="16"
+                      fontFamily="Archivo Black, Inter, sans-serif"
+                      fontWeight="900"
+                      fontSize="20"
                       textAnchor="middle"
                       dominantBaseline="middle"
                       transform={`rotate(${(start + end) / 2 + 90}, ${tx}, ${ty})`}
                     >
-                      {s.label}
+                      {s.pct}%
                     </text>
                   </g>
                 );
