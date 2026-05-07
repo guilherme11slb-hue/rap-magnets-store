@@ -122,9 +122,19 @@
   }
   .paper-bg {
     background-color: var(--paper);
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='320' height='320' viewBox='0 0 320 320'><g fill='none' stroke='%23d4d4d4' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='40' cy='40' r='18'/><path d='M30 38 q5 6 10 0 t10 0'/><path d='M28 32 l3 3 M48 32 l-3 3'/><path d='M120 30 l8 16 18 2 -13 12 4 18 -17 -9 -17 9 4 -18 -13 -12 18 -2z'/><path d='M210 50 q20 -20 40 0 q-20 20 -40 0z'/><path d='M225 50 l10 0 M230 45 l0 10'/><path d='M280 110 q-15 10 0 25 q15 -10 0 -25z'/><path d='M40 130 l30 0 M40 140 l20 0 M40 150 l25 0'/><circle cx='180' cy='150' r='22'/><path d='M170 145 q5 -8 10 0 M190 145 q-5 -8 -10 0 M170 158 q10 8 20 0'/><path d='M70 220 q15 -25 30 0 q15 25 30 0 q15 -25 30 0'/><path d='M240 210 l25 25 M265 210 l-25 25'/><path d='M40 280 q20 -10 40 0 q20 10 40 0'/><path d='M180 270 c0 -15 25 -15 25 0 c0 10 -12 18 -12 25 M193 305 l0 4'/><circle cx='270' cy='280' r='12'/><path d='M260 280 l20 0 M270 270 l0 20'/></g></svg>");
-    background-size: 320px 320px;
+    background-image: url("./assets/doodle-bg.png");
+    background-size: 480px 480px;
     background-repeat: repeat;
+    background-blend-mode: lighten;
+  }
+  .paper-bg::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: var(--paper);
+    opacity: 0.82;
+    pointer-events: none;
+    z-index: -1;
   }
 }
 
