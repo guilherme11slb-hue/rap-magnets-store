@@ -61,8 +61,8 @@ function Catalog() {
             className="doodle-border doodle-shadow bg-paper p-4 animate-pop-in hover-pop"
             style={{ animationDelay: `${i * 0.05}s` }}
           >
-            <div className="aspect-square overflow-hidden border-2 border-ink">
-              <img src={p.image} alt={p.name} className="h-full w-full object-cover" loading="lazy" width={1024} height={1024} />
+            <div className="aspect-square overflow-hidden border-2 border-ink bg-gradient-to-br from-neutral-700 via-neutral-800 to-neutral-900">
+              <img src={p.image} alt={p.name} className="h-full w-full object-contain drop-shadow-[0_6px_10px_rgba(0,0,0,0.55)]" loading="lazy" width={1024} height={1024} />
             </div>
             <div className="mt-4 flex items-baseline justify-between">
               <h2 className="font-display text-3xl">{p.name}</h2>
