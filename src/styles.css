@@ -122,19 +122,11 @@
   }
   .paper-bg {
     background-color: var(--paper);
-    background-image: url("./assets/doodle-bg.png");
-    background-size: 480px 480px;
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.86), rgba(255, 255, 255, 0.86)),
+      url("./assets/doodle-bg.png");
+    background-size: auto, 480px 480px;
     background-repeat: repeat;
-    background-blend-mode: lighten;
-  }
-  .paper-bg::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background: var(--paper);
-    opacity: 0.82;
-    pointer-events: none;
-    z-index: -1;
   }
 }
 
