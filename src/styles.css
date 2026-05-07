@@ -28,7 +28,7 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --font-display: "Caveat Brush", "Comic Sans MS", cursive;
+  --font-display: "Archivo Black", "Inter", system-ui, sans-serif;
   --font-hand: "Caveat", cursive;
   --font-body: "Inter", system-ui, sans-serif;
   --color-ink: var(--ink);
@@ -38,32 +38,32 @@
 :root {
   --radius: 0.5rem;
   --background: oklch(0.99 0 0);
-  --foreground: oklch(0.12 0 0);
+  --foreground: oklch(0.20 0 0);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.12 0 0);
+  --card-foreground: oklch(0.20 0 0);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.12 0 0);
-  --primary: oklch(0.12 0 0);
+  --popover-foreground: oklch(0.20 0 0);
+  --primary: oklch(0.55 0.22 27);
   --primary-foreground: oklch(0.99 0 0);
-  --secondary: oklch(0.96 0 0);
-  --secondary-foreground: oklch(0.12 0 0);
+  --secondary: oklch(0.96 0.02 27);
+  --secondary-foreground: oklch(0.20 0 0);
   --muted: oklch(0.96 0 0);
-  --muted-foreground: oklch(0.45 0 0);
-  --accent: oklch(0.92 0 0);
-  --accent-foreground: oklch(0.12 0 0);
+  --muted-foreground: oklch(0.40 0 0);
+  --accent: oklch(0.92 0.04 27);
+  --accent-foreground: oklch(0.20 0 0);
   --destructive: oklch(0.55 0.22 27);
   --destructive-foreground: oklch(0.99 0 0);
-  --border: oklch(0.12 0 0);
+  --border: oklch(0.55 0.22 27);
   --input: oklch(0.88 0 0);
-  --ring: oklch(0.12 0 0);
-  --ink: oklch(0.12 0 0);
+  --ring: oklch(0.55 0.22 27);
+  --ink: oklch(0.55 0.22 27);
   --paper: oklch(0.99 0 0);
 }
 
 @layer base {
   @font-face {
-    font-family: "Caveat Brush";
-    src: url("https://fonts.gstatic.com/s/caveatbrush/v15/EYq0maZfwr9S9-ETZc3fKXtMW7mT034.woff2") format("woff2");
+    font-family: "Archivo Black";
+    src: url("https://fonts.gstatic.com/s/archivoblack/v21/HTxqL289NzCGg4MzN6KJ7eW6CYyF_g.woff2") format("woff2");
     font-display: swap;
   }
   @font-face {
