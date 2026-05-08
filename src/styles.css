@@ -82,7 +82,7 @@
   }
   html, body {
     background-color: var(--paper);
-    color: var(--ink);
+    color: var(--foreground);
     font-family: var(--font-body);
   }
   h1, h2, h3, h4 {
