@@ -25,7 +25,7 @@ function Home() {
             <span className="font-hand inline-block -rotate-2 text-3xl">yo, check this out →</span>
             <h1 className="font-display mt-3 text-6xl leading-[0.95] md:text-8xl">
               Rap legends.<br />
-              <span className="underline-squiggle">On your fridge.</span>
+              <span>On your fridge.</span>
             </h1>
             <p className="mt-6 max-w-md text-lg text-muted-foreground">
               Hand-doodled magnets of your favorite American rappers. Sketchy lines, sticky backs,
