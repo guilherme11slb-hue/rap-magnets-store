@@ -37,27 +37,27 @@
 
 :root {
   --radius: 0.5rem;
-  --background: oklch(0.99 0 0);
-  --foreground: oklch(0.20 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.20 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.20 0 0);
+  --background: oklch(0.18 0.01 270);
+  --foreground: oklch(0.96 0 0);
+  --card: oklch(0.22 0.01 270);
+  --card-foreground: oklch(0.96 0 0);
+  --popover: oklch(0.22 0.01 270);
+  --popover-foreground: oklch(0.96 0 0);
   --primary: oklch(0.55 0.22 27);
   --primary-foreground: oklch(0.99 0 0);
-  --secondary: oklch(0.96 0.02 27);
-  --secondary-foreground: oklch(0.20 0 0);
-  --muted: oklch(0.96 0 0);
-  --muted-foreground: oklch(0.40 0 0);
-  --accent: oklch(0.92 0.04 27);
-  --accent-foreground: oklch(0.20 0 0);
+  --secondary: oklch(0.28 0.02 27);
+  --secondary-foreground: oklch(0.96 0 0);
+  --muted: oklch(0.28 0.01 270);
+  --muted-foreground: oklch(0.75 0 0);
+  --accent: oklch(0.32 0.04 27);
+  --accent-foreground: oklch(0.96 0 0);
   --destructive: oklch(0.55 0.22 27);
   --destructive-foreground: oklch(0.99 0 0);
   --border: oklch(0.55 0.22 27);
-  --input: oklch(0.88 0 0);
+  --input: oklch(0.30 0 0);
   --ring: oklch(0.55 0.22 27);
-  --ink: oklch(0.55 0.22 27);
-  --paper: oklch(0.99 0 0);
+  --ink: oklch(0.78 0.18 60);
+  --paper: oklch(0.18 0.01 270);
 }
 
 @layer base {
@@ -123,7 +123,7 @@
   .paper-bg {
     background-color: var(--paper);
     background-image:
-      linear-gradient(rgba(255, 255, 255, 0.86), rgba(255, 255, 255, 0.86)),
+      linear-gradient(rgba(20, 18, 30, 0.78), rgba(20, 18, 30, 0.78)),
       url("./assets/doodle-bg.png");
     background-size: auto, 480px 480px;
     background-repeat: repeat;
